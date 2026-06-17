@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{CHAPTER_TITLE}} · {{COURSE_NAME}}学习报告</title>
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']], processEscapes: true, tags: 'none' }, svg: { fontCache: 'global' } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">{{COURSE_NAME}}<small>学习报告 · {{CHAPTER_SHORT}}</small></div>
+    <a class="home-link" href="index.html">← 返回首页目录</a>
+    <nav>
+      <!-- 每个正文 <h2 id="x"> 对应一条 <a href="#x">；重要的 <h3 id="y"> 用 class="lvl2" 缩进 -->
+      <a href="#intro">本章导读</a>
+      <a href="#sec1">1. 第一节标题</a>
+      <a href="#sec1-1" class="lvl2">1.1 子节</a>
+      <a href="#summary">本章小结</a>
+    </nav>
+  </aside>
+  <main class="content">
+    <header class="page-header"><div class="inner">
+      <div class="eyebrow">{{COURSE_EN}} · {{CHAPTER_EN}}</div>
+      <h1>{{CHAPTER_TITLE}}</h1>
+      <p>{{ONE_LINE_SUMMARY}}</p>
+    </div></header>
+    <div class="content-inner">
+
+      <h2 id="intro">本章导读</h2>
+      <p>说明本章在整门课/整套资料中的位置、要解决什么问题、与前后章的联系。</p>
+
+      <!-- ============ 正文：按节组织 ============ -->
+      <h2 id="sec1"><span class="secnum">1</span>第一节标题</h2>
+
+      <div class="box definition">
+        <div class="box-title"><span class="tag">定义</span> 概念名称</div>
+        <p>精确陈述……</p>
+        <p><strong>直觉：</strong>用大白话解释它在说什么、为什么这样定义、有什么用。</p>
+      </div>
+
+      <div class="box theorem">
+        <div class="box-title"><span class="tag">定理</span> 定理名称</div>
+        <p>完整陈述（条件 + 结论）。</p>
+      </div>
+      <div class="box proof">
+        <div class="box-title"><span class="tag">证明</span></div>
+        <p>逐步证明，补全资料里跳过的步骤……<span class="qed">∎</span></p>
+      </div>
+      <details class="derive"><summary>展开：更冗长的代数细节</summary>
+        <div><p>把会打断主线的繁琐推导放这里。</p></div>
+      </details>
+
+      <div class="box example">
+        <div class="box-title"><span class="tag">例题</span> 例 1</div>
+        <p><strong>题目：</strong>完整题面。</p>
+        <ol class="steps">
+          <li><strong>第一步——做什么 &amp; 为什么：</strong>具体代数过程。</li>
+          <li><strong>第二步：</strong>……</li>
+          <li><strong>结论：</strong>最终答案。</li>
+        </ol>
+      </div>
+
+      <div class="box insight"><div class="box-title"><span class="tag">直觉</span> 一句话洞察</div><p>……</p></div>
+      <div class="box pitfall"><div class="box-title"><span class="tag">易错</span> 常见坑</div><p>……</p></div>
+      <div class="box note"><div class="box-title"><span class="tag">注</span></div><p>……</p></div>
+
+      <p class="conclusion">本节最关键的一句话结论。</p>
+
+      <hr class="sep">
+
+      <!-- ============ 本章小结 ============ -->
+      <h2 id="summary">本章小结</h2>
+      <p>用一段话把本章主线串起来。</p>
+      <div class="tbl-wrap"><table class="data">
+        <caption>核心公式 / 方法速查表</caption>
+        <thead><tr><th>名称</th><th>公式 / 要点</th><th>适用条件</th></tr></thead>
+        <tbody>
+          <tr><td>……</td><td>$……$</td><td>……</td></tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </main>
+</div>
+<a class="back-top" href="#" title="回到顶部">↑</a>
+<script src="script.js"></script>
+</body>
+</html>
