@@ -20,6 +20,15 @@
 - **自包含**：除 CDN 的 MathJax 外只依赖本地 `style.css` / `script.js`，可直接静态托管。
 - 发现原资料的笔误/算错会**纠正并注明**，不默默照抄。
 
+## 往年真题整理
+
+除了把讲义整理成知识报告，还能**把历年试卷按章节归类、逐题详解**。试卷的特点是一份卷子跨多个章节，所以会先**拆题 + 判定每题属于哪一章**，再逐章汇编：
+
+- 产出 `exam-chapN.html`（每章真题精解）+ `exam-index.html`（真题总览）；**可单独运行**——手里只有试卷、没有讲义也行。
+- 每题含：**出处/题型/考点/难度徽章** + 考点定位 + 逐步解析（默认折叠在「先做后看」解答框里，方便自测）+ 最终答案高亮 + 易错点 + 举一反三。
+- 总览页有**年份 × 章节分布矩阵**和高频考点统计，一眼看清复习重点。
+- **试卷带答案**则核对扩充、纠正错误；**不带答案**则从零推导并自查。
+
 ## 安装
 
 把本仓库内容放进 Claude Code 的 skills 目录：
@@ -58,14 +67,17 @@ Claude 会按以下流水线工作：
 
 ```
 lecture-report-skill/
-├── SKILL.md                      # 主文件：七步流程 + 硬性质量约束 + 排错
+├── SKILL.md                      # 主文件：流程 + 硬性质量约束 + 排错
 ├── reference/
-│   └── subagent-prompt.md        # 派给每章 subagent 的完整 prompt 模板
+│   ├── subagent-prompt.md        # 知识报告·每章 subagent 的 prompt 模板
+│   └── exam-subagent-prompt.md   # 往年真题·每章 subagent 的 prompt 模板
 ├── templates/
-│   ├── style.css                 # 共享样式（彩色盒子 / 步骤 / 速查表 / 侧边栏）
+│   ├── style.css                 # 共享样式（彩色盒子 / 步骤 / 速查表 / 真题组件）
 │   ├── script.js                 # 侧边栏滚动高亮
-│   ├── chapter.html              # 单章页骨架（含各类盒子用法示例）
-│   └── index.html                # 导航首页骨架
+│   ├── chapter.html              # 知识报告·单章页骨架
+│   ├── index.html                # 知识报告·导航首页骨架
+│   ├── exam-chapter.html         # 往年真题·单章精解页骨架
+│   └── exam-index.html           # 往年真题·总览页骨架
 └── examples/
     └── probability-statistics/   # 示例：概率统计第 6–9 章学习报告
 ```

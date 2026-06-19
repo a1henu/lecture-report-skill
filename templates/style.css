@@ -330,3 +330,44 @@ hr.sep { border: none; border-top: 1px dashed var(--line); margin: 40px 0; }
   box-shadow: 0 4px 14px rgba(0,0,0,.2); opacity:.85;
 }
 .back-top:hover { opacity: 1; }
+
+/* ===================================================================
+   往年真题组件（exam-chapN.html / exam-index.html 使用）
+   =================================================================== */
+
+/* 真题盒子（靛蓝色，区别于例题的青色） */
+.box.exam { border-left-color: #4f46e5; background: #f0f1fe; }
+.box.exam .tag { background: #4f46e5; }
+
+/* 题目出处 / 题型 / 考点 / 难度 徽章行 */
+.exam-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; align-items: center; }
+.exam-badge { font-size: 12px; padding: 2px 10px; border-radius: 6px; font-weight: 600; line-height: 1.6; }
+.exam-badge.year   { background: #4f46e5; color: #fff; }                 /* 年份/出处 */
+.exam-badge.type   { background: #ddd6fe; color: #5b21b6; }              /* 题型：计算/证明/选择… */
+.exam-badge.kaodian{ background: #fff; border: 1px solid #c7d2fe; color: #4338ca; } /* 考点标签 */
+.exam-badge.diff   { background: #fef3c7; color: #92400e; }              /* 难度 ★ */
+.exam-badge.freq   { background: #fee2e2; color: #b91c1c; }              /* 高频提示 */
+
+/* 题面区 */
+.exam .stem { margin: 4px 0 6px; }
+.exam .stem::before { content: "【题目】"; font-weight: 700; color: #4338ca; }
+
+/* 「先做后看」可折叠解答（默认收起，便于自测） */
+details.solution { margin: 10px 0 4px; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+details.solution > summary { cursor: pointer; padding: 9px 15px; background: #eef2ff; font-weight: 600; font-size: 14.5px; color: #3730a3; list-style: none; }
+details.solution > summary::before { content: "📝 展开详细解答与解析"; }
+details.solution[open] > summary::before { content: "📝 收起解答"; }
+details.solution[open] > summary { border-bottom: 1px solid var(--line); }
+details.solution > div { padding: 8px 16px 14px; }
+
+/* 标准答案高亮条 */
+.final-answer { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 8px 14px; margin: 12px 0; }
+.final-answer::before { content: "✅ 最终答案　"; font-weight: 700; color: #047857; }
+
+/* 真题矩阵表：年份×章节 命中标记 */
+table.matrix td.hit { background: #e0e7ff; color: #3730a3; font-weight: 700; }
+table.matrix td.none { color: #cbd5e1; }
+
+/* 真题首页卡片配色（与知识卡片区分） */
+.chap-card.exam-card:hover { box-shadow: 0 10px 26px rgba(79,70,229,.16); border-color: #4f46e5; }
+.chap-card.exam-card .cnum { color: #4f46e5; }

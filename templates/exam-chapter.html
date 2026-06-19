@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{CHAPTER_TITLE}} · 往年真题精解 · {{COURSE_NAME}}</title>
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']], processEscapes: true, tags: 'none' }, svg: { fontCache: 'global' } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">{{COURSE_NAME}}<small>往年真题 · {{CHAPTER_SHORT}}</small></div>
+    <a class="home-link" href="exam-index.html">← 返回真题总览</a>
+    <nav>
+      <!-- 按题型或考点分组：每个 <h2 id> 一条 <a>；重要 <h3 id> 用 class="lvl2" -->
+      <a href="#overview">本章考情</a>
+      <a href="#g1">一、计算题</a>
+      <a href="#g2">二、证明题</a>
+      <a href="#summary">高频考点小结</a>
+    </nav>
+    <!-- 若同时整理了讲义知识报告，加一条跳转： -->
+    <!-- <a class="home-link" href="chap6.html" style="background:#0d9488">📖 看本章知识报告</a> -->
+  </aside>
+  <main class="content">
+    <header class="page-header" style="background:linear-gradient(135deg,#4f46e5 0%,#3730a3 100%)"><div class="inner">
+      <div class="eyebrow">PAST EXAMS · {{CHAPTER_EN}}</div>
+      <h1>{{CHAPTER_TITLE}}　往年真题精解</h1>
+      <p>本章共收录 {{N}} 道真题，覆盖 {{YEARS}}。每题含出处、考点、逐步解析与易错提醒。</p>
+    </div></header>
+    <div class="content-inner">
+
+      <h2 id="overview">本章考情概览</h2>
+      <p>本章在历年考试中的分布、题型、高频考点与备考重点。</p>
+      <div class="tbl-wrap"><table class="data">
+        <caption>本章真题年份 × 考点分布</caption>
+        <thead><tr><th>年份/出处</th><th>题型</th><th>考点</th><th>难度</th></tr></thead>
+        <tbody>
+          <tr><td>2023 期末 三</td><td>计算</td><td>……</td><td>★★☆</td></tr>
+        </tbody>
+      </table></div>
+
+      <!-- ============ 按题型（或考点）分组，组内逐题 ============ -->
+      <h2 id="g1"><span class="secnum">一</span>计算题</h2>
+
+      <div class="box exam">
+        <div class="box-title"><span class="tag">真题</span> 第 1 题</div>
+        <div class="exam-meta">
+          <span class="exam-badge year">2023 期末·三</span>
+          <span class="exam-badge type">计算题</span>
+          <span class="exam-badge kaodian">考点：极大似然估计</span>
+          <span class="exam-badge diff">难度 ★★☆</span>
+          <span class="exam-badge freq">高频</span>
+        </div>
+        <p class="stem">完整题面，原样转录（公式用 MathJax）。</p>
+
+        <details class="solution"><summary></summary><div>
+          <p><strong>考点定位：</strong>本题考查……，对应知识点……。</p>
+          <ol class="steps">
+            <li><strong>第一步——做什么 &amp; 为什么：</strong>……</li>
+            <li><strong>第二步：</strong>……</li>
+            <li><strong>结论：</strong>……</li>
+          </ol>
+          <p class="final-answer">$\hat\theta = \cdots$</p>
+          <div class="box pitfall"><div class="box-title"><span class="tag">易错</span></div><p>本题常见错误……</p></div>
+          <div class="box insight"><div class="box-title"><span class="tag">举一反三</span></div><p>同类变式……</p></div>
+        </div></details>
+      </div>
+
+      <h2 id="g2"><span class="secnum">二</span>证明题</h2>
+      <!-- 同上结构 -->
+
+      <hr class="sep">
+      <h2 id="summary">本章高频考点小结</h2>
+      <p>把本章真题反映出的高频考点、典型套路、踩坑点汇总。</p>
+      <div class="tbl-wrap"><table class="data">
+        <caption>高频考点速查</caption>
+        <thead><tr><th>考点</th><th>出现次数</th><th>典型题型</th><th>关键方法</th></tr></thead>
+        <tbody><tr><td>……</td><td>3</td><td>计算</td><td>……</td></tr></tbody>
+      </table></div>
+
+    </div>
+  </main>
+</div>
+<a class="back-top" href="#" title="回到顶部">↑</a>
+<script src="script.js"></script>
+</body>
+</html>
